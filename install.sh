@@ -9,3 +9,4 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
     vim +PluginInstall +qall
 fi
 
+ln -sv ~/.dotfiles/git/.gitconfig ~

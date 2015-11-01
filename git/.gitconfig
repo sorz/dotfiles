@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[user]
+	email = orz@sorz.org
+	name = sorz
+[credential]
+	helper = store
