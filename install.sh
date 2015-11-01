@@ -10,3 +10,7 @@ fi
 vim +PluginInstall +qall
 
 ln -sv ~/.dotfiles/git/.gitconfig ~
+
+if [ "$TERM" = "xterm" ]; then
+    ln -sv ~/.dotfiles/mintty/.minttyrc ~
+fi
