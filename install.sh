@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 
 ln -sv ~/.dotfiles/vim/.vimrc ~
 mkdir -p ~/.vim/.tmp
