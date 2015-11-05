@@ -6,8 +6,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'rust-lang/rust.vim'
 Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
