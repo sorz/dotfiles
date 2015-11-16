@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Vim
 ln -sv ~/.dotfiles/vim/.vimrc ~
 mkdir -p ~/.vim/.tmp
 chmod og-rwx ~/.vim/.tmp
@@ -9,8 +10,13 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
 fi
 vim +PluginInstall +qall
 
+# Git
 ln -sv ~/.dotfiles/git/.gitconfig ~
 
+# Mintty
 if [ "$TERM" = "xterm" ]; then
     ln -sv ~/.dotfiles/mintty/.minttyrc ~
 fi
+
+# Bash
+ln -sv ~/.dotfiles/bash/.bashrc ~
