@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 "Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
@@ -66,7 +67,9 @@ autocmd FileType css setlocal et sta ts=4 sts=4 sw=4
 autocmd FileType javascript setlocal et sta ts=2 sts=2 sw=2
 
 " https://github.com/bling/vim-airline
-let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
 " https://github.com/airblade/vim-gitgutter
 set updatetime=1000
+
+" https://github.com/tpope/vim-fugitive
