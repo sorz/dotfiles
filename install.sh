@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull
 
 # Vim
 ln -sv ~/.dotfiles/vim/.vimrc ~
