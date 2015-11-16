@@ -4,13 +4,11 @@ filetype off
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'bling/vim-airline'
 "Plugin 'rust-lang/rust.vim'
-
 call vundle#end()
-
 
 set history=1000
 set undofile
@@ -66,3 +64,4 @@ autocmd FileType htmldjango setlocal et sta ts=2 sts=2 sw=2
 autocmd FileType css setlocal et sta ts=4 sts=4 sw=4
 autocmd FileType javascript setlocal et sta ts=2 sts=2 sw=2
 
+let g:airline#extensions#tabline#enabled = 1
