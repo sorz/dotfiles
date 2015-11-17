@@ -13,6 +13,7 @@ vim +PluginInstall +qall
 
 # Git
 ln -sv ~/.dotfiles/git/.gitconfig ~
+ln -sv ~/.dotfiles/git/.gitattributes ~
 
 # Mintty
 if [ "$TERM" = "xterm" ]; then
