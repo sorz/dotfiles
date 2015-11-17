@@ -17,8 +17,10 @@ alias grep='grep --color=auto'
 
 export EDITOR="vim"
 
-# For Debain & Cygwin
+# For Debain, Cygwin & CentOS
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
+[[ -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 PS1='\[\e[00;32m\]\u\[\e[00m\]@\[\e[00;31m\]\h\[\e[00m\]:\[\e[00;36m\]\w\[\e[00m\]\$ '
