@@ -17,5 +17,9 @@ alias grep='grep --color=auto'
 
 export EDITOR="vim"
 
+# For Debain & Cygwin
+[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
 PS1='[\u@\h \W]\$ '
 [ -r ~/.byobu/prompt ] && . ~/.byobu/prompt   #byobu-prompt#
