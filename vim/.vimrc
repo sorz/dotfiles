@@ -72,4 +72,9 @@ set laststatus=2
 " https://github.com/airblade/vim-gitgutter
 set updatetime=1000
 
-" https://github.com/tpope/vim-fugitive
+" https://github.com/easymotion/vim-easymotion
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-s)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
