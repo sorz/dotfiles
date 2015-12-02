@@ -7,3 +7,5 @@
 	name = sorz
 [credential]
 	helper = store
+[alias]
+	co = checkout
