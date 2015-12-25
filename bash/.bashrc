@@ -14,6 +14,7 @@ shopt -s checkwinsize
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias dotenv='. env/bin/activate'
 
 export EDITOR="vim"
 
