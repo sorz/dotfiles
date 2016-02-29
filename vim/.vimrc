@@ -9,6 +9,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'nathangrigg/vim-beancount'
 "Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
@@ -78,3 +79,8 @@ let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-s)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" https://github.com/nathangrigg/vim-beancount
+"let b:beancount_root = '~/beancount/main.bean'
+"autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
+"autocmd FileType beancount inoremap <Tab> <c-x><c-o>
