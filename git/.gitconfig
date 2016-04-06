@@ -5,6 +5,7 @@
 [user]
 	email = orz@sorz.org
 	name = sorz
+	signingkey = C5C6EE41
 [credential]
 	helper = store
 [alias]
