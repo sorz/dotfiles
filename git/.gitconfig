@@ -10,3 +10,5 @@
 	helper = store
 [alias]
 	co = checkout
+[commit]
+	gpgsign = true
