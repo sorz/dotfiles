@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	autocrlf = true
 [push]
 	default = simple
 [user]
