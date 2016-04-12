@@ -22,3 +22,7 @@ fi
 
 # Bash
 ln -sv ~/.dotfiles/bash/.bashrc ~
+
+# GnuPG
+mkdir -p ~/.gnupg
+ln -sv ~/.dotfiles/gnupg/gpg-agent.conf ~/.gnupg/

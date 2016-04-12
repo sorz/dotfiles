@@ -26,3 +26,10 @@ export EDITOR="vim"
 
 PS1='\[\e[00;32m\]\u\[\e[00m\]@\[\e[00;31m\]\h\[\e[00m\]:\[\e[00;36m\]\w\[\e[00m\]\$ '
 [ -r ~/.byobu/prompt ] && . ~/.byobu/prompt   #byobu-prompt#
+
+
+# Set GPG TTY
+export GPG_TTY=$(tty)
+
+# Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
