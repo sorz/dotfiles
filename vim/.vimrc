@@ -9,7 +9,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'nathangrigg/vim-beancount'
+"Plugin 'nathangrigg/vim-beancount'
 "Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
