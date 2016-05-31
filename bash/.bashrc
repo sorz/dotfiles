@@ -32,4 +32,4 @@ PS1='\[\e[00;32m\]\u\[\e[00m\]@\[\e[00;31m\]\h\[\e[00m\]:\[\e[00;36m\]\w\[\e[00m
 export GPG_TTY=$(tty)
 
 # Refresh gpg-agent tty in case user switches into an X session
-gpg-connect-agent updatestartuptty /bye >/dev/null
+#gpg-connect-agent updatestartuptty /bye >/dev/null
