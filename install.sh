@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~/.dotfiles
 git pull
 
 # Vim
