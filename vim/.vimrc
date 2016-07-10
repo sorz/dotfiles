@@ -31,6 +31,9 @@ set nu
 set scrolloff=3
 set mouse=v
 
+" For cute Kwan
+set pastetoggle=<F10>
+
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 syntax on
