@@ -26,4 +26,5 @@ ln -sv ~/.dotfiles/bash/.bashrc ~
 
 # GnuPG
 mkdir -p ~/.gnupg
+chmod 700 ~/.gnupg
 ln -sv ~/.dotfiles/gnupg/gpg-agent.conf ~/.gnupg/
