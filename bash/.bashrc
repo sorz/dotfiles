@@ -32,6 +32,9 @@ export EDITOR="vim"
 PS1='\[\e[00;32m\]\u\[\e[00m\]@\[\e[00;31m\]\h\[\e[00m\]:\[\e[00;36m\]\w\[\e[00m\]\$ '
 [ -r ~/.byobu/prompt ] && . ~/.byobu/prompt   #byobu-prompt#
 
+# bind the up and down arrow keys to search
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 # Set GPG TTY
 export GPG_TTY=$(tty)
