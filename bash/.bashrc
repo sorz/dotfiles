@@ -7,7 +7,7 @@
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
-HISTSIZE=2000
+HISTSIZE=8000
 HISTFILESIZE=8000
 
 shopt -s checkwinsize
@@ -38,3 +38,20 @@ export GPG_TTY=$(tty)
 
 # Refresh gpg-agent tty in case user switches into an X session
 #gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# Sync bash history
+# http://unix.stackexchange.com/questions/1288/
+#   preserve-bash-history-in-multiple-terminal-windows
+_bash_history_sync() {
+  builtin history -a         #1
+  HISTFILESIZE=$HISTSIZE     #2
+  builtin history -c         #3
+  builtin history -r         #4
+}
+
+history() {                  #5
+  _bash_history_sync
+  builtin history "$@"
+}
+
+PROMPT_COMMAND=_bash_history_sync
