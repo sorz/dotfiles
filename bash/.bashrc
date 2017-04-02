@@ -59,3 +59,16 @@ history() {                  #5
 }
 
 PROMPT_COMMAND=_bash_history_sync
+
+# linux brew
+if [[ -d ~/.linuxbrew ]]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+    [[ -f "~/.linuxbrew/etc/openssl/certs/ca-certificates.crt" ]] && \
+        export CURL_CA_BUNDLE="$HOME/.linuxbrew/etc/openssl/certs/ca-certificates.crt"
+fi
+
+# local per-machine settings
+[[ -f ~/.bash_local ]] && . ~/.bash_local
+
