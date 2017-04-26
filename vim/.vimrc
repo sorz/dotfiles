@@ -10,7 +10,7 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'nathangrigg/vim-beancount'
-"Plugin 'rust-lang/rust.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 set history=1000
