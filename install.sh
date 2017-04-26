@@ -28,3 +28,8 @@ ln -sv ~/.dotfiles/bash/.bashrc ~
 mkdir -p ~/.gnupg
 chmod 700 ~/.gnupg
 ln -sv ~/.dotfiles/gnupg/gpg-agent.conf ~/.gnupg/
+
+# Byobu
+if [ -d "$HOME/.byobu" ]; then
+    ln -sv ~/.dotfiles/byobu/.tmux.conf ~/.byobu/
+fi
