@@ -72,3 +72,8 @@ fi
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
+# Windows Subsystem for Linux
+if [[ "`uname -r`" == *"Microsoft" ]]; then
+    export LS_COLORS='tw=04;34;40:ow=04;34:';
+fi
+
