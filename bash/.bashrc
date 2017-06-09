@@ -75,6 +75,22 @@ fi
 # Windows Subsystem for Linux
 if [[ "`uname -r`" == *"Microsoft" ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
+    export BROWSER=explorer.exe
     #export GNUPGHOME="/mnt/c/Users/$USER/AppData/Roaming/gnupg"
+
+    # Set title on terminal
+    # https://unix.stackexchange.com/a/341277
+    function _set_window_title() {
+        printf "\033]0;$USER@$HOSTNAME (WSL)\007"
+    }
+    _set_window_title
+    function ssh() {
+        /usr/bin/ssh "$@"
+        _set_window_title
+    }
+    function mosh() {
+        /usr/bin/mosh "$@"
+        _set_window_title
+    }
 fi
 
