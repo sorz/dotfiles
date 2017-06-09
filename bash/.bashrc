@@ -69,6 +69,9 @@ if [[ -d ~/.linuxbrew ]]; then
         export CURL_CA_BUNDLE="$HOME/.linuxbrew/etc/openssl/certs/ca-certificates.crt"
 fi
 
+# local bin
+[[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
+
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
