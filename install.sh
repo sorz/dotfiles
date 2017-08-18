@@ -4,8 +4,8 @@ git pull
 
 # Vim
 ln -sv ~/.dotfiles/vim/.vimrc ~
-mkdir -p ~/.vim/.tmp
-chmod og-rwx ~/.vim/.tmp
+mkdir -p -m 700 ~/.cache
+mkdir -p -m 700 ~/.cache/vim
 if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git \
         ~/.vim/bundle/Vundle.vim

@@ -46,9 +46,9 @@ set hlsearch
 set ignorecase
 set showmatch
 set backupskip=/tmp/*,/private/tmp/*
-set backupdir=~/.vim/.tmp
-set viewdir=~/.vim/.tmp
-set undodir=~/.vim/.tmp
+set backupdir=~/.cache/vim/
+set viewdir=~/.cache/vim/
+set undodir=~/.cache/vim/
 
 augroup line_return
     au!
