@@ -2,16 +2,6 @@
 cd ~/.dotfiles
 git pull
 
-# Vim
-ln -sv ~/.dotfiles/vim/.vimrc ~
-mkdir -p -m 700 ~/.cache
-mkdir -p -m 700 ~/.cache/vim
-if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git \
-        ~/.vim/bundle/Vundle.vim
-fi
-vim +PluginInstall +qall
-
 # Git
 ln -sv ~/.dotfiles/git/.gitconfig ~
 ln -sv ~/.dotfiles/git/.gitattributes ~
@@ -33,3 +23,16 @@ ln -sv ~/.dotfiles/gnupg/gpg-agent.conf ~/.gnupg/
 if [ -d "$HOME/.byobu" ]; then
     ln -sv ~/.dotfiles/byobu/.tmux.conf ~/.byobu/
 fi
+
+# Vim
+ln -sv ~/.dotfiles/vim/.vimrc ~
+mkdir -p -m 700 ~/.cache
+mkdir -p -m 700 ~/.cache/vim
+if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git \
+        ~/.vim/bundle/Vundle.vim
+else
+    git -C ~/.vim/bundle/Vundle.vim pull
+fi
+vim +PluginInstall +qall
+
