@@ -79,7 +79,7 @@ fi
 # Windows Subsystem for Linux
 if [[ "`uname -r`" == *"Microsoft" ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
-    export BROWSER=explorer.exe
+    export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
     #export GNUPGHOME="/mnt/c/Users/$USER/AppData/Roaming/gnupg"
 
     # Set title on terminal
