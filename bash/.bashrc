@@ -80,6 +80,7 @@ fi
 if [[ "`uname -r`" == *"Microsoft" ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
     export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
+    export TERM='screen-256color'
     #export GNUPGHOME="/mnt/c/Users/$USER/AppData/Roaming/gnupg"
 
     # Set title on terminal
