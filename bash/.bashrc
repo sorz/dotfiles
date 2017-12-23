@@ -72,6 +72,7 @@ fi
 
 # local bin
 [[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
+[[ -d ~/.cargo/bin ]] && export PATH="$HOME/.cargo/bin:$PATH"
 
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
