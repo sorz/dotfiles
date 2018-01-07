@@ -18,6 +18,19 @@ alias grep='grep --color=auto'
 alias dotenv='. env/bin/activate'
 alias vi='vim'
 
+if which systemctl > /dev/null 2>&1; then
+    alias sys='sudo systemctl'
+    syses() {
+        sudo systemctl enable $@ && \
+        sudo systemctl start $@ && \
+        sudo systemctl status $@
+    }
+    sysds() {
+        sudo systemctl disable $@ && \
+        sudo systemctl stop $@
+    }
+fi
+
 export EDITOR="vim"
 
 # For Debain, Cygwin & CentOS
