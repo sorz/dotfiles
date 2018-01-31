@@ -3,9 +3,9 @@
 [push]
 	default = simple
 [user]
-	email = orz@sorz.org
+	email = me@sorz.org
 	name = sorz
-	signingkey = C5C6EE41
+	signingkey = 54B28DBBD8496F7E
 [credential]
 	helper = store
 [alias]
