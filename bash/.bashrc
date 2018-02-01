@@ -31,6 +31,14 @@ if which systemctl > /dev/null 2>&1; then
     }
 fi
 
+啊啊啊() {
+    if [ -x '/usr/bin/pacman' ]; then
+        sudo pacman -Syu
+    elif [ -x '/usr/bin/apt' ]; then
+        sudo apt update && sudo apt upgrade
+    fi
+}
+
 export EDITOR="vim"
 
 # For Debain, Cygwin & CentOS
