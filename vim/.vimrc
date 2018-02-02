@@ -30,7 +30,8 @@ set ruler
 set cursorline
 set nu
 set scrolloff=3
-set mouse=v
+set mouse=a
+set ttymouse=xterm2
 
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
