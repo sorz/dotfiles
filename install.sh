@@ -18,6 +18,7 @@ ln -sv ~/.dotfiles/bash/.bashrc ~
 mkdir -p ~/.gnupg
 chmod 700 ~/.gnupg
 ln -sv ~/.dotfiles/gnupg/gpg-agent.conf ~/.gnupg/
+ln -sv ~/.dotfiles/gnupg/gpg.conf ~/.gnupg/
 
 # Byobu
 if [ -d "$HOME/.byobu" ]; then
