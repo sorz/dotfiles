@@ -34,3 +34,4 @@ AllowBlinking=no
 Term=xterm
 BellType=0
 BellFlash=no
+Charwidth=unicode
