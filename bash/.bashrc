@@ -96,6 +96,9 @@ fi
 [[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d ~/.cargo/bin ]] && export PATH="$HOME/.cargo/bin:$PATH"
 
+# Android
+[[ -d /opt/android ]] && export ANDROID_HOME="/opt/android"
+
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
