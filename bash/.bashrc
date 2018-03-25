@@ -18,6 +18,7 @@ alias grep='grep --color=auto'
 alias dotenv='. env/bin/activate'
 alias vi='vim'
 alias json='python -m json.tool'
+alias log='journalctl -u'
 
 if which systemctl > /dev/null 2>&1; then
     alias sys='sudo systemctl'
