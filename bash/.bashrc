@@ -107,6 +107,7 @@ fi
 if [[ "`uname -r`" == *"Microsoft" ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
     export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
+    alias gpg='gpg.exe'
 
     # Set title on terminal
     # https://unix.stackexchange.com/a/341277
