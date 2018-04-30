@@ -41,6 +41,14 @@ fi
     fi
 }
 
+if [ -x '/usr/bin/pacman' ]; then
+    alias 啊啊='sudo pacman -S'
+    alias 啊='pacman -Ss'
+elif [ -x '/usr/bin/apt' ]; then
+    alias 啊啊='sudo apt install'
+    alias 啊='apt search'
+fi
+
 export EDITOR="vim"
 
 # For Debain, Cygwin & CentOS
