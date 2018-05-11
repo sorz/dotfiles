@@ -9,6 +9,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=8000
 HISTFILESIZE=8000
+HISTFILE="$HOME/.bash-history"
 
 shopt -s checkwinsize
 shopt -s autocd
