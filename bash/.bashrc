@@ -94,6 +94,12 @@ history() {                  #5
 
 PROMPT_COMMAND=_bash_history_sync
 
+# https://github.com/junegunn/fzf
+if [[ -d '/usr/share/fzf' ]]; then
+    source /usr/share/fzf/key-bindings.bash
+fi
+
+
 # linux brew
 if [[ -d ~/.linuxbrew ]]; then
     export PATH="$HOME/.linuxbrew/bin:$PATH"
