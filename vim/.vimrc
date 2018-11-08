@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'nathangrigg/vim-beancount'
 Plugin 'rust-lang/rust.vim'
 Plugin 'avakhov/vim-yaml'
+Plugin 'nfnty/vim-nftables'
 call vundle#end()
 
 set history=1000
