@@ -13,7 +13,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rust-lang/rust.vim'
 Plugin 'avakhov/vim-yaml'
 Plugin 'nfnty/vim-nftables'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
+
+colorscheme molokai
 
 set history=1000
 set undofile
