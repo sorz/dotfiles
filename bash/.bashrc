@@ -99,6 +99,10 @@ if [[ -d '/usr/share/fzf' ]]; then
     source /usr/share/fzf/key-bindings.bash
 fi
 
+# https://github.com/cantino/mcfly
+if [[ -d '/usr/share/mcfly' ]]; then
+    source /usr/share/mcfly/mcfly.bash
+fi
 
 # linux brew
 if [[ -d ~/.linuxbrew ]]; then
