@@ -35,5 +35,5 @@ if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
 else
     git -C ~/.vim/bundle/Vundle.vim pull
 fi
-vim +PluginInstall +qall
+vim +PluginInstall! +qall
 
