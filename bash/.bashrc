@@ -113,6 +113,13 @@ if [[ -d ~/.linuxbrew ]]; then
         export CURL_CA_BUNDLE="$HOME/.linuxbrew/etc/openssl/certs/ca-certificates.crt"
 fi
 
+# generated bash profies
+if [[ -d ~/.dotfiles/bash/generated ]]; then
+    for file in ~/.dotfiles/bash/generated/*; do
+        source $file
+    done
+fi
+
 # local bin
 [[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d ~/.cargo/bin ]] && export PATH="$HOME/.cargo/bin:$PATH"

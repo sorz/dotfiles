@@ -13,6 +13,11 @@ fi
 
 # Bash
 ln -sv ~/.dotfiles/bash/.bashrc ~
+BASHD=~/.dotfiles/bash/generated
+mkdir -p $BASHD
+if hash pip 2> /dev/null; then
+    pip completion --bash > $BASHD/pip_completion
+fi
 
 # GnuPG
 mkdir -p ~/.gnupg
