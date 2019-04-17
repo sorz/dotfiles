@@ -35,3 +35,5 @@ Term=xterm
 BellType=0
 BellFlash=no
 Charwidth=unicode
+Emojis=noto
+AllowSetSelection=true
