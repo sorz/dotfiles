@@ -13,6 +13,7 @@ fi
 
 # Cache dir
 mkdir -pm 700 ~/.cache
+touch ~/.cache/.nobackup
 
 # Bash
 ln -svf ~/.dotfiles/bash/.bashrc ~
