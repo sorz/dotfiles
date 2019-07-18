@@ -11,10 +11,16 @@ if [ "$TERM" = "xterm" ]; then
     ln -svf ~/.dotfiles/mintty/.minttyrc ~
 fi
 
+# Cache dir
+mkdir -pm 700 ~/.cache
+
 # Bash
 ln -svf ~/.dotfiles/bash/.bashrc ~
 BASHD=~/.dotfiles/bash/generated
 mkdir -p $BASHD
+
+# Python
+mkdir -p ~/.cache/pycache
 if hash pip 2> /dev/null; then
     pip completion --bash > $BASHD/pip_completion
 fi
@@ -32,7 +38,6 @@ fi
 
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
-mkdir -p -m 700 ~/.cache
 mkdir -p -m 700 ~/.cache/vim
 if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git \

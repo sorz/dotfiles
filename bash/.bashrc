@@ -127,6 +127,9 @@ fi
 # Android
 [[ -d /opt/android ]] && export ANDROID_HOME="/opt/android"
 
+# Python
+[[ -d ~/.cache/pycache ]] && export PYTHONPYCACHEPREFIX="~/.cache/pycache"
+
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
