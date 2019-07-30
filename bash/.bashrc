@@ -18,7 +18,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias dotenv='. env/bin/activate'
 alias vi='vim'
-alias json='python -m json.tool'
+alias json='python3 -m json.tool'
 alias log='journalctl -u'
 alias pping='prettyping --nolegend'
 
@@ -129,6 +129,12 @@ fi
 
 # Python
 [[ -d ~/.cache/pycache ]] && export PYTHONPYCACHEPREFIX="~/.cache/pycache"
+. /etc/os-release
+if [[ "$NAME" = "Ubuntu" ]]; then
+    alias python=python3
+    alias pip=pip3
+    alias ipython=ipython3
+fi
 
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
