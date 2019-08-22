@@ -140,7 +140,7 @@ fi
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
 # Windows Subsystem for Linux
-if [[ "`uname -r`" == *"Microsoft" ]]; then
+if [[ "`uname -r`" == *"microsoft"* ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
     export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
     alias gpg='gpg.exe'
