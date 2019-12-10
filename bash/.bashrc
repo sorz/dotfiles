@@ -136,6 +136,9 @@ if [[ "$NAME" = "Ubuntu" ]]; then
     alias ipython=ipython3
 fi
 
+# Rust
+[[ -x ~/.cargo/bin/sccache ]] && export RUSTC_WRAPPER=sccache
+
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
 
