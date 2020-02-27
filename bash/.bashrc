@@ -122,13 +122,14 @@ fi
 
 # local bin
 [[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
-[[ -d ~/.cargo/bin ]] && export PATH="$HOME/.cargo/bin:$PATH"
+[[ -d ~/.cargo/bin ]] && export PATH="$PATH:$HOME/.cargo/bin"
+[[ -d ~/go/bin ]] && export PATH="$PATH:$HOME/go/bin"
 
 # Android
 [[ -d /opt/android ]] && export ANDROID_HOME="/opt/android"
 
 # Python
-[[ -d ~/.cache/pycache ]] && export PYTHONPYCACHEPREFIX="~/.cache/pycache"
+[[ -d ~/.cache/pycache ]] && export PYTHONPYCACHEPREFIX="$HOME/.cache/pycache"
 . /etc/os-release
 if [[ "$NAME" = "Ubuntu" ]]; then
     alias python=python3
@@ -138,6 +139,9 @@ fi
 
 # Rust
 [[ -x ~/.cargo/bin/sccache ]] && export RUSTC_WRAPPER=sccache
+
+# Go
+[[ -x /usr/bin/go ]] && [[ -d ~/go ]] && export GOPATH="$HOME/go"
 
 # local per-machine settings
 [[ -f ~/.bash_local ]] && . ~/.bash_local
