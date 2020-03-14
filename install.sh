@@ -1,6 +1,10 @@
 #!/bin/bash
 cd ~/.dotfiles
+T=`stat -c %Y install.sh`
 git pull
+if [ $T != `stat -c %Y install.sh` ]; then
+    exec ./install.sh
+fi
 
 # Git
 ln -svf ~/.dotfiles/git/.gitconfig ~
