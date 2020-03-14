@@ -14,6 +14,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'avakhov/vim-yaml'
 Plugin 'nfnty/vim-nftables'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'fcpg/vim-osc52'
 call vundle#end()
 
 colorscheme molokai
@@ -90,3 +91,6 @@ map <Leader>k <Plug>(easymotion-k)
 "let b:beancount_root = '~/beancount/main.bean'
 "autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
 "autocmd FileType beancount inoremap <Tab> <c-x><c-o>
+
+" https://github.com/fcpg/vim-osc52
+xmap Y y:call SendViaOSC52(getreg('"'))<CR>
