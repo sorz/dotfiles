@@ -1,23 +1,25 @@
 set nocompatible
 filetype off
 
-" https://github.com/gmarik/Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'bling/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'nathangrigg/vim-beancount'
-Plugin 'rust-lang/rust.vim'
-Plugin 'avakhov/vim-yaml'
-Plugin 'nfnty/vim-nftables'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'fcpg/vim-osc52'
-call vundle#end()
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'Lokaltog/vim-easymotion'
+Plug 'bling/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+"Plug 'nathangrigg/vim-beancount'
+Plug 'rust-lang/rust.vim'
+Plug 'avakhov/vim-yaml'
+Plug 'nfnty/vim-nftables'
+Plug 'flazz/vim-colorschemes'
+Plug 'fcpg/vim-osc52'
+call plug#end()
 
-colorscheme molokai
+try
+    colorscheme molokai
+catch /^Vim\%((\a\+)\)\=:E185/
+    " Ignore it
+endtry
 
 set history=1000
 set undofile

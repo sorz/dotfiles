@@ -44,11 +44,7 @@ fi
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
 mkdir -p -m 700 ~/.cache/vim
-if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git \
-        ~/.vim/bundle/Vundle.vim
-else
-    git -C ~/.vim/bundle/Vundle.vim pull
-fi
-vim +PluginInstall! +qall
+curl -Lo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugUpdate! +qall
 
