@@ -44,7 +44,12 @@ fi
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
 mkdir -p -m 700 ~/.cache/vim
-curl -Lo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+PLUG="~/.vim/autoload/plug.vim"
+PLUGURL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+if [ -f $PLUG ]; then
+    curl -Lo $PLUG -z $PLUG $PLUGURL
+else
+    curl -Lo $PLUG --create-dirs $PLUGURL
+fi
 vim +PlugUpdate! +qall
 
