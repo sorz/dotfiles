@@ -21,7 +21,7 @@ touch ~/.cache/.nobackup
 
 # Bash
 ln -svf ~/.dotfiles/bash/.bashrc ~
-BASHD=~/.dotfiles/bash/generated
+BASHD="$HOME/.dotfiles/bash/generated"
 mkdir -p $BASHD
 
 # Python
@@ -44,11 +44,13 @@ fi
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
 mkdir -p -m 700 ~/.cache/vim
-PLUG="~/.vim/autoload/plug.vim"
+PLUG="$HOME/.vim/autoload/plug.vim"
 PLUGURL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-if [ -f $PLUG ]; then
+if [ -f "$PLUG" ]; then
+    echo update curl -Lo $PLUG -z $PLUG $PLUGURL
     curl -Lo $PLUG -z $PLUG $PLUGURL
 else
+    echo install curl -Lo $PLUG --create-dirs $PLUGURL
     curl -Lo $PLUG --create-dirs $PLUGURL
 fi
 vim +PlugUpdate! +qall
