@@ -168,3 +168,19 @@ if [[ "`uname -r`" == *"microsoft"* ]]; then
     }
 fi
 
+# Rename files without typing the full name two times 
+# https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
+function mv() {
+  if [ "$#" -ne 1 ]; then
+    command mv "$@"
+    return
+  fi
+  if [ ! -f "$1" ]; then
+    command file "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  mv -v "$1" "$newfilename"
+} 
+
