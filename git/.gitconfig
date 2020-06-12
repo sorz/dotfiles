@@ -4,11 +4,16 @@
 	default = simple
 [user]
 	email = me@sorz.org
-	name = sorz
-	signingkey = 54B28DBBD8496F7E
+	name = Shell Chen
+	signingkey = 573AC4CFA38DBA3A
 [credential]
 	helper = store
 [alias]
 	co = checkout
 [commit]
 	gpgsign = true
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.sorz.org
+	smtpuser = me
+	smtpserverport = 587
