@@ -121,9 +121,10 @@ if [[ -d ~/.dotfiles/bash/generated ]]; then
 fi
 
 # local bin
-[[ -d ~/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
-[[ -d ~/.cargo/bin ]] && export PATH="$PATH:$HOME/.cargo/bin"
-[[ -d ~/go/bin ]] && export PATH="$PATH:$HOME/go/bin"
+BIN_DIRS=".local .cargo .yarn go"
+for dir in $BIN_DIRS; do
+    [[ -d "$HOME/$dir/bin" ]] && export PATH="$HOME/$dir/bin:$PATH"
+done
 
 # Android
 [[ -d /opt/android ]] && export ANDROID_HOME="/opt/android"
