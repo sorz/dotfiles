@@ -109,7 +109,7 @@ if [[ -d ~/.linuxbrew ]]; then
     export PATH="$HOME/.linuxbrew/bin:$PATH"
     export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
     export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-    [[ -f "~/.linuxbrew/etc/openssl/certs/ca-certificates.crt" ]] && \
+    [[ -f "$HOME/.linuxbrew/etc/openssl/certs/ca-certificates.crt" ]] && \
         export CURL_CA_BUNDLE="$HOME/.linuxbrew/etc/openssl/certs/ca-certificates.crt"
 fi
 
@@ -149,7 +149,9 @@ fi
 # Windows Subsystem for Linux
 if [[ "`uname -r`" == *"microsoft"* ]]; then
     export LS_COLORS='tw=04;34;40:ow=04;34:';
-    export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
+    firefox='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
+    [ -f "$firefox" ] && export BROWSER="$firefox"
+    [ -f "/usr/bin/wslview" ] && export BROWSER="wslview"
     alias gpg='gpg.exe'
 
     # Set title on terminal
