@@ -13,6 +13,7 @@ HISTFILE="$HOME/.bash-history"
 
 shopt -s checkwinsize
 shopt -s autocd
+shopt -s globstar
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
