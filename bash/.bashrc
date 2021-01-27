@@ -140,7 +140,8 @@ if [[ "$NAME" = "Ubuntu" ]]; then
 fi
 
 # Rust
-[[ -x ~/.cargo/bin/sccache ]] && export RUSTC_WRAPPER=sccache
+[[ -x ~/.cargo/bin/sccache ]] && export RUSTC_WRAPPER="$HOME/.cargo/bin/sccache"
+[[ -x /usr/bin/sccache ]] && export RUSTC_WRAPPER="/usr/bin/sccache"
 
 # Go
 [[ -x /usr/bin/go ]] && [[ -d ~/go ]] && export GOPATH="$HOME/go"
