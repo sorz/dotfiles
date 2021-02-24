@@ -21,7 +21,7 @@ alias dotenv='. env/bin/activate'
 alias vi='vim'
 alias json='python3 -m json.tool --no-ensure-ascii'
 alias log='journalctl -u'
-alias pping='prettyping --nolegend'
+alias scp='rsync --archive --copy-links --partial --inplace --compress-choice=zstd'
 
 if which systemctl > /dev/null 2>&1; then
     alias sys='sudo systemctl'
