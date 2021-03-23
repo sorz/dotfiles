@@ -23,6 +23,7 @@ touch ~/.cache/.nobackup
 ln -svf ~/.dotfiles/bash/.bashrc ~
 BASHD="$HOME/.dotfiles/bash/generated"
 mkdir -p $BASHD
+touch -a "$BASHD/empty"
 
 # Python
 mkdir -p ~/.cache/pycache
