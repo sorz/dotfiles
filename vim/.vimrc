@@ -13,6 +13,7 @@ Plug 'avakhov/vim-yaml'
 Plug 'nfnty/vim-nftables'
 Plug 'flazz/vim-colorschemes'
 Plug 'fcpg/vim-osc52'
+Plug 'chr4/nginx.vim'
 call plug#end()
 
 try
