@@ -175,6 +175,8 @@ if [[ "`uname -r`" == *"microsoft"* ]]; then
         /usr/bin/mosh "$@"
         _set_window_title
     }
+
+    alias dropcache='echo 1 | sudo tee /proc/sys/vm/drop_caches > /dev/null'
 fi
 
 # Rename files without typing the full name two times 
