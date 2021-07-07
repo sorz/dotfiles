@@ -14,6 +14,7 @@ Plug 'nfnty/vim-nftables'
 Plug 'flazz/vim-colorschemes'
 Plug 'fcpg/vim-osc52'
 Plug 'chr4/nginx.vim'
+Plug 'neoclide/jsonc.vim'
 call plug#end()
 
 try
@@ -76,6 +77,10 @@ autocmd FileType django setlocal et sta ts=2 sts=2 sw=2
 autocmd FileType htmldjango setlocal et sta ts=2 sts=2 sw=2
 autocmd FileType css setlocal et sta ts=4 sts=4 sw=4
 autocmd FileType javascript setlocal et sta ts=2 sts=2 sw=2
+autocmd FileType v2ray setlocal filetype=jsonc et sta sw=2 sts=2
+
+autocmd BufRead,BufNewFile /etc/v2ray/*.json setlocal filetype=v2ray
+autocmd BufRead,BufNewFile /opt/v2ray/*.json setlocal filetype=v2ray
 
 " https://github.com/bling/vim-airline
 set laststatus=2
