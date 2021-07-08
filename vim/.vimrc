@@ -68,9 +68,9 @@ augroup END
 set foldlevel=99
 
 filetype plugin indent on
-autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType sh setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal et sta sw=4 sts=4 foldmethod=indent
 autocmd FileType c setlocal et sta sw=4 sts=4
-autocmd FileType python setlocal foldmethod=indent
 autocmd FileType java setlocal et sta sw=4 sts=4
 autocmd FileType html setlocal et sta ts=2 sts=2 sw=2
 autocmd FileType django setlocal et sta ts=2 sts=2 sw=2
