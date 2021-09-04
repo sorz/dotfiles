@@ -56,7 +56,14 @@ elif [ -x '/usr/bin/apt' ]; then
     alias 啊='apt search'
 fi
 
-export EDITOR="vim"
+if hash nvim 2> /dev/null; then
+    export EDITOR='nvim'
+    alias vim=nvim
+    alias vi=nvim
+else
+    export EDITOR='vim'
+    alias vi=vim
+fi
 
 # For Debain, Cygwin & CentOS
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion

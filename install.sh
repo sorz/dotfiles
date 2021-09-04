@@ -44,7 +44,7 @@ fi
 
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
-mkdir -p -m 700 ~/.cache/vim
+mkdir -pm 700 ~/.cache/vim
 PLUG="$HOME/.vim/autoload/plug.vim"
 PLUGURL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 if [ -f "$PLUG" ]; then
@@ -56,3 +56,9 @@ else
 fi
 vim +PlugUpdate! +qall
 
+# neovim
+if hash nvim 2> /dev/null; then
+    ln -svf ~/.dotfiles/nvim ~/.config/nvim
+    mkdir -pm 700 ~/.cache/nvim
+    nvim +PlugUpdate! +qall
+fi

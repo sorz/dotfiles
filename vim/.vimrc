@@ -40,7 +40,7 @@ set cursorline
 set nu
 set scrolloff=3
 set mouse=a
-set ttymouse=xterm2
+"set ttymouse=xterm2
 
 hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
