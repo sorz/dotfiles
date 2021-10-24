@@ -8,6 +8,7 @@ set undodir=~/.cache/nvim/
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'Lokaltog/vim-easymotion'
 call plug#end()
 
 " Reset cursor on leave
