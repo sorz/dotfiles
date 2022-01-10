@@ -7,8 +7,25 @@ if [ $T != `stat -c %Y install.sh` ]; then
 fi
 
 # Git
-ln -svf ~/.dotfiles/git/.gitconfig ~
 ln -svf ~/.dotfiles/git/.gitattributes ~
+rm -f ~/.gitconfig
+GPGEXE='/mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe'
+if [[ "`uname -r`" == *"microsoft"* ]] && [[ -x "$GPGEXE" ]]; then
+    echo "# Generated at `date`" > ~/.gitconfig
+    cat ~/.dotfiles/git/.gitconfig >> ~/.gitconfig
+    echo '[gpg]' >> ~/.gitconfig
+
+    WINHOME="/mnt/c/Users/`whoami`/"
+    if [[ -d "$WINHOME" ]]; then
+        cp ~/.gitconfig "$WINHOME"
+        printf "\tprogram = C:/Program Files (x86)/GnuPG/bin/gpg.exe\n" \
+            >> "$WINHOME/.gitconfig"
+    fi
+
+    printf "\tprogram = gpg.exe\n" >> ~/.gitconfig
+else
+    ln -svf ~/.dotfiles/git/.gitconfig ~
+fi
 
 # Mintty
 if [ "$TERM" = "xterm" ]; then
