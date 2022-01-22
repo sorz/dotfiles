@@ -15,6 +15,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'fcpg/vim-osc52'
 Plug 'chr4/nginx.vim'
 Plug 'neoclide/jsonc.vim'
+Plug 'tpope/vim-sleuth'
 call plug#end()
 
 try
