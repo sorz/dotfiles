@@ -19,3 +19,4 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 au VimLeave,VimSuspend * set guicursor=a:ver25
 
+autocmd FileType html setlocal et sta ts=2 sts=2 sw=2
