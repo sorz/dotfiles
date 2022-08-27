@@ -81,4 +81,5 @@ lua <<EOF
   require('lspconfig')['rust_analyzer'].setup{
     flags = lsp_flags,
   }
+  vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 EOF
