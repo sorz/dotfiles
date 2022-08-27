@@ -20,3 +20,16 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
 au VimLeave,VimSuspend * set guicursor=a:ver25
 
 autocmd FileType html setlocal et sta ts=2 sts=2 sw=2
+
+lua << EOF
+  require'nvim-treesitter.configs'.setup {
+    ensure_installed = {
+      "c", "python", "rust", "bash", "css", "gitignore", "html", "javascript",
+      "json", "make", "typescript", "vim", "yaml", "go", "cpp", "markdown",
+    },
+    sync_install = false,
+    auto_install = true,
+  }
+
+
+EOF
