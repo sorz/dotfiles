@@ -36,6 +36,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'Mofiqul/vscode.nvim'
 Plug 'farmergreg/vim-lastplace'
+Plug 'nfnty/vim-nftables'
+Plug 'chr4/nginx.vim'
 -- https://github.com/hrsh7th/nvim-cmp
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
