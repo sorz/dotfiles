@@ -87,3 +87,4 @@ else
     /usr/bin/vim +PlugUpdate! +qall
 fi
 
+printf "\nDone.\n"
