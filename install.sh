@@ -59,6 +59,10 @@ if [ -d "$HOME/.byobu" ]; then
     ln -svf ~/.dotfiles/byobu/.tmux.conf ~/.byobu/
 fi
 
+# wget
+touch -a "$HOME/.wget-hsts"
+chmod og-rwx "$HOME/.wget-hsts"
+
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
 mkdir -pm 700 ~/.cache/vim
