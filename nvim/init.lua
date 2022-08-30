@@ -36,6 +36,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'Mofiqul/vscode.nvim'
 Plug 'farmergreg/vim-lastplace'
+Plug 'nmac427/guess-indent.nvim'
 Plug 'nfnty/vim-nftables'
 Plug 'chr4/nginx.vim'
 -- https://github.com/hrsh7th/nvim-cmp
@@ -81,6 +82,10 @@ require('lualine').setup {
 -- gitsigns.nvim (Git)
 -- https://github.com/lewis6991/gitsigns.nvim
 require('gitsigns').setup()
+
+-- GuessIndent
+-- https://github.com/NMAC427/guess-indent.nvim
+require('guess-indent').setup()
 
 -- Treesitter
 -- https://github.com/nvim-treesitter/nvim-treesitter
