@@ -103,20 +103,24 @@ cmp.setup {
         expand = function(args)
             vim.fn["vsnip#anonymous"](args.body)
         end,
-        mapping = cmp.mapping.preset.insert {
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-Space>'] = cmp.mapping.complete(),
-            ['<C-e>'] = cmp.mapping.abort(),
-            ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        },
-        sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'vsnip' },
-        }, {
-            { name = 'buffer' },
-        }),
-    }
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert {
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' },
+    }, {
+        { name = 'buffer' },
+    }),
 }
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -133,11 +137,11 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
-require('lspconfig')['pyright'].setup{
+require('lspconfig')['pyright'].setup {
     flags = lsp_flags,
     on_attach = on_attach,
 }
-require('lspconfig')['rust_analyzer'].setup{
+require('lspconfig')['rust_analyzer'].setup {
     flags = lsp_flags,
     on_attach = on_attach,
 }
