@@ -31,6 +31,7 @@ vim.cmd('au VimLeave,VimSuspend * set guicursor=a:ver25')
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug 'ggandor/leap.nvim'
+Plug 'lambdalisue/suda.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
@@ -53,6 +54,11 @@ vim.call('plug#end')
 -- Leap (EasyMotion alt.)
 -- https://github.com/ggandor/leap.nvim
 require('leap').set_default_keymaps()
+
+
+-- Suda
+-- https://github.com/lambdalisue/suda.vim
+vim.g.suda_smart_edit = 1
 
 -- vscode (theme)
 -- https://github.com/Mofiqul/vscode.nvim
