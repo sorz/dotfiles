@@ -65,6 +65,10 @@ else
     alias vi=vim
 fi
 
+if hash paru 2> /dev/null; then
+    alias yay=paru
+fi
+
 # For Debain, Cygwin & CentOS
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 [[ -f /usr/share/bash-completion/bash_completion ]] && \
