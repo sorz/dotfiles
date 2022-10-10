@@ -30,7 +30,7 @@ vim.cmd('au VimLeave,VimSuspend * set guicursor=a:ver25')
 -- Plug
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
-Plug 'phaazon/hop.nvim'
+Plug 'ggandor/leap.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
@@ -50,12 +50,9 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 vim.call('plug#end')
 
--- Hop (EasyMotion alt.)
--- https://github.com/phaazon/hop.nvim
-require('hop').setup {
-    case_insensitive = false,
-}
-vim.api.nvim_set_keymap('n', 's', ':HopChar1\n', {})
+-- Leap (EasyMotion alt.)
+-- https://github.com/ggandor/leap.nvim
+require('leap').set_default_keymaps()
 
 -- vscode (theme)
 -- https://github.com/Mofiqul/vscode.nvim
