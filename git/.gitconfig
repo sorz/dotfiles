@@ -11,7 +11,7 @@
 [alias]
 	co = checkout
 [commit]
-	gpgsign = true
+	gpgsign = false
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.sorz.org
