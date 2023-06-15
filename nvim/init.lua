@@ -13,6 +13,8 @@ local opts = {
     smartindent = true;
     ignorecase = true;
     foldlevel = 99;
+    -- https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6#neovim
+    termguicolors = true;
 }
 for k, v in pairs(opts) do vim.opt[k] = v end
 
@@ -64,12 +66,15 @@ vim.g.suda_smart_edit = 1
 -- https://github.com/Mofiqul/vscode.nvim
 vim.o.background = 'dark'
 require('vscode').setup {
+    transparent = true,
     italic_comments = true,
+    disable_nvimtree_bg = true,
     color_overrides = {
         vscBack = '#121212',
         vscCursorDarkDark = '#000000',
     },
 }
+require('vscode').load()
 
 -- Lualine (status line)
 -- https://github.com/nvim-lualine/lualine.nvim
