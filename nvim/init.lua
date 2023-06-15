@@ -33,7 +33,6 @@ vim.cmd('au VimLeave,VimSuspend * set guicursor=a:ver25')
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug 'ggandor/leap.nvim'
-Plug 'lambdalisue/suda.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
