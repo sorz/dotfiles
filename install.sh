@@ -75,16 +75,13 @@ else
     echo install curl -Lo $PLUG --create-dirs $PLUGURL
     curl -Lo $PLUG --create-dirs $PLUGURL
 fi
+/usr/bin/vim +PlugUpdate! +qall
 
 # neovim
-NVIM_AUTOLOAD="$HOME/.local/share/nvim/site/autoload/"
 if hash nvim 2> /dev/null; then
     ln -svf ~/.dotfiles/nvim ~/.config/
-    mkdir -p "$NVIM_AUTOLOAD"
-    cp "$PLUG" "$NVIM_AUTOLOAD"
-    nvim +PlugUpdate! +qall
+    ate! +qall
 else
-    /usr/bin/vim +PlugUpdate! +qall
 fi
 
 printf "\nDone.\n"

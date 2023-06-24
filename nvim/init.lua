@@ -29,33 +29,46 @@ vim.cmd(
 )
 vim.cmd('au VimLeave,VimSuspend * set guicursor=a:ver25')
 
--- Plug
-local Plug = vim.fn['plug#']
-vim.call('plug#begin')
-Plug 'ggandor/leap.nvim'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
-Plug 'Mofiqul/vscode.nvim'
-Plug 'farmergreg/vim-lastplace'
-Plug 'nmac427/guess-indent.nvim'
-Plug 'nfnty/vim-nftables'
-Plug 'chr4/nginx.vim'
--- https://github.com/hrsh7th/nvim-cmp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-vim.call('plug#end')
+-- Plugin
+-- https://github.com/folke/lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
+local plugins = {
+    'ggandor/leap.nvim',
+    'nvim-lualine/lualine.nvim',
+    'lewis6991/gitsigns.nvim',
+    'nvim-treesitter/nvim-treesitter',
+    'Mofiqul/vscode.nvim',
+    'farmergreg/vim-lastplace',
+    'nmac427/guess-indent.nvim',
+    'nfnty/vim-nftables',
+    'chr4/nginx.vim',
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/vim-vsnip',
+}
+require("lazy").setup(plugins, {
+    checker = { enabled = true },
+})
 -- Leap (EasyMotion alt.)
 -- https://github.com/ggandor/leap.nvim
 require('leap').set_default_keymaps()
-
 
 -- Suda
 -- https://github.com/lambdalisue/suda.vim
