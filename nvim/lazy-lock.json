@@ -13,8 +13,8 @@
   "nvim-cmp": { "branch": "main", "commit": "e1f1b40790a8cb7e64091fb12cc5ffe350363aa0" },
   "nvim-lspconfig": { "branch": "master", "commit": "b6b34b9acf84949f0ac1c00747765e62b81fb38d" },
   "nvim-treesitter": { "branch": "master", "commit": "18983e3a8266249e0a813c1056a2a51e07be3faa" },
+  "tokyonight.nvim": { "branch": "main", "commit": "fd0a005fd8986ec0d98a1938dc570303e8d8444b" },
   "vim-lastplace": { "branch": "master", "commit": "cef9d62165cd26c3c2b881528a5290a84347059e" },
   "vim-nftables": { "branch": "master", "commit": "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff" },
-  "vim-vsnip": { "branch": "master", "commit": "7753ba9c10429c29d25abfd11b4c60b76718c438" },
-  "vscode.nvim": { "branch": "main", "commit": "3ae7e188f0b58b29bc1b5d3698e47ce54f51caf9" }
+  "vim-vsnip": { "branch": "master", "commit": "7753ba9c10429c29d25abfd11b4c60b76718c438" }
 }

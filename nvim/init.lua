@@ -49,7 +49,7 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'nvim-treesitter/nvim-treesitter',
-    'Mofiqul/vscode.nvim',
+    { 'folke/tokyonight.nvim', lazy = false, priority = 1000 },
     'farmergreg/vim-lastplace',
     'nmac427/guess-indent.nvim',
     'nfnty/vim-nftables',
@@ -64,7 +64,7 @@ local plugins = {
     'hrsh7th/vim-vsnip',
 }
 require("lazy").setup(plugins, {
-    checker = { enabled = true },
+    checker = { enabled = false },
 })
 -- Leap (EasyMotion alt.)
 -- https://github.com/ggandor/leap.nvim
@@ -74,26 +74,22 @@ require('leap').set_default_keymaps()
 -- https://github.com/lambdalisue/suda.vim
 vim.g.suda_smart_edit = 1
 
+-- tokyonight (theme)
+-- https://github.com/folke/tokyonight.nvim
+require("tokyonight").setup({
+    transparent = true,
+})
+vim.cmd[[colorscheme tokyonight]]
+
 -- vscode (theme)
 -- https://github.com/Mofiqul/vscode.nvim
-vim.o.background = 'dark'
-require('vscode').setup {
-    transparent = true,
-    italic_comments = true,
-    disable_nvimtree_bg = true,
-    color_overrides = {
-        vscBack = '#121212',
-        vscCursorDarkDark = '#000000',
-    },
-}
-require('vscode').load()
 
 -- Lualine (status line)
 -- https://github.com/nvim-lualine/lualine.nvim
 require('lualine').setup {
     options = {
         icons_enabled = false,
-        theme = 'vscode',
+        theme = 'tokyonight',
         section_separators = '',
         component_separators = '',
     }
