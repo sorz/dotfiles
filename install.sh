@@ -80,7 +80,6 @@ fi
 # neovim
 if hash nvim 2> /dev/null; then
     ln -svf ~/.dotfiles/nvim ~/.config/
-    ate! +qall
 fi
 
 printf "\nDone.\n"
