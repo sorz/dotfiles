@@ -81,7 +81,6 @@ fi
 if hash nvim 2> /dev/null; then
     ln -svf ~/.dotfiles/nvim ~/.config/
     ate! +qall
-else
 fi
 
 printf "\nDone.\n"
