@@ -80,6 +80,7 @@ fi
 # neovim
 if hash nvim 2> /dev/null; then
     ln -svf ~/.dotfiles/nvim ~/.config/
+    nvim --headless '+Lazy! sync' +qa
 fi
 
 printf "\nDone.\n"
