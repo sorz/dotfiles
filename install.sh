@@ -58,6 +58,10 @@ ln -svf ~/.dotfiles/gnupg/gpg.conf ~/.gnupg/
 if [ -d "$HOME/.byobu" ]; then
     ln -svf ~/.dotfiles/byobu/.tmux.conf ~/.byobu/
 fi
+if [ -d "$HOME/.config/byobu" ]; then
+    ln -svf ~/.dotfiles/byobu/.tmux.conf ~/.config/byobu
+fi
+
 
 # wget
 touch -a "$HOME/.wget-hsts"
