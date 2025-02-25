@@ -5,6 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Launch byobu
+if [[ "`uname -r`" != *"microsoft"* ]]; then
+    if [ -x '/usr/bin/byobu-launch' ]; then
+        _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+    fi
+fi
+
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=8000
