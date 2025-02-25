@@ -206,3 +206,13 @@ function mv() {
   mv -v "$1" "$newfilename"
 } 
 
+# Enter fish if exists
+# https://wiki.archlinux.org/title/Fish#Modify_.bashrc_to_drop_into_fish
+if [[ -x '/usr/bin/fish' &&
+      -z ${BASH_EXECUTION_STRING} &&
+      $(ps --no-header --pid=$PPID --format=comm) != "fish"
+]]; then
+    shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
+    exec fish $LOGIN_OPTION
+fi
+
