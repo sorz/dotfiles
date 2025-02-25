@@ -62,10 +62,15 @@ if [ -d "$HOME/.config/byobu" ]; then
     ln -svf ~/.dotfiles/byobu/.tmux.conf ~/.config/byobu
 fi
 
-
 # wget
 touch -a "$HOME/.wget-hsts"
 chmod og-rwx "$HOME/.wget-hsts"
+
+# fish
+if hash fish 2> /dev/null; then
+    mkdir -p ~/.config/
+    ln -svf ~/.dotfiles/fish ~/.config/
+fi
 
 # Vim
 ln -svf ~/.dotfiles/vim/.vimrc ~
