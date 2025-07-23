@@ -91,6 +91,8 @@ if hash nvim 2> /dev/null; then
     mkdir -p ~/.config/
     ln -svf ~/.dotfiles/nvim ~/.config/
     nvim --headless '+Lazy! sync' +qa
+    nvim --headless '+TSUpdate' +qa
+
 fi
 
 printf "\nDone.\n"
