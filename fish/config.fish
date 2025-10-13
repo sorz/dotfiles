@@ -21,6 +21,10 @@ if status is-interactive
     else
         set -gx EDITOR vim
     end
+    if command -q helix
+        alias hx=helix
+        set -gx EDITOR helix
+    end
 
     # WSL
     if uname -a | string match -eq WSL2
