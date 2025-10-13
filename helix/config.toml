@@ -1,0 +1,33 @@
+theme = "tokyonight-transparent"
+
+[editor]
+end-of-line-diagnostics = "hint"
+true-color = true
+
+[editor.indent-guides]
+character = "▏"
+render = true
+skip-levels = 2
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.whitespace.tab]
+render = "all"
+
+[keys.insert]
+S-tab = "move_parent_node_start"
+
+[keys.normal]
+S-tab = "move_parent_node_start"
+tab = "move_parent_node_end"
+
+[keys.normal.Z]
+Z = ":x"
+
+[keys.select]
+S-tab = "extend_parent_node_start"
+tab = "extend_parent_node_end"

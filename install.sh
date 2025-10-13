@@ -92,7 +92,12 @@ if hash nvim 2> /dev/null; then
     ln -svf ~/.dotfiles/nvim ~/.config/
     nvim --headless '+Lazy! sync' +qa
     nvim --headless '+TSUpdate' +qa
+fi
 
+# helix
+if hash helix 2> /dev/null; then
+    mkdir -p ~/.config/
+    ln -svf ~/.dotfiles/helix ~/.config/
 fi
 
 printf "\nDone.\n"
