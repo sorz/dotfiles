@@ -1,21 +1,16 @@
-[core]
-	editor = vim
 [push]
 	default = simple
 [user]
 	email = me@sorz.org
 	name = Shell Chen
-	signingkey = 573AC4CFA38DBA3A
+	signingKey = "~/.ssh/id_gitsign.pub"
+[gpg]
+	format = "ssh"
 [credential]
 	helper = store
 [alias]
 	co = checkout
 [commit]
-	gpgsign = false
-[sendemail]
-	smtpencryption = tls
-	smtpserver = smtp.sorz.org
-	smtpuser = me
-	smtpserverport = 587
+	gpgsign = true
 [init]
 	defaultBranch = main
