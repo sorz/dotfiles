@@ -45,7 +45,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    'ggandor/leap.nvim',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'nvim-treesitter/nvim-treesitter',
@@ -66,9 +65,6 @@ local plugins = {
 require("lazy").setup(plugins, {
     checker = { enabled = false },
 })
--- Leap (EasyMotion alt.)
--- https://github.com/ggandor/leap.nvim
-require('leap').set_default_keymaps()
 
 -- Suda
 -- https://github.com/lambdalisue/suda.vim
@@ -154,14 +150,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
-require('lspconfig')['pyright'].setup {
-    flags = lsp_flags,
-    on_attach = on_attach,
-}
-require('lspconfig')['rust_analyzer'].setup {
-    flags = lsp_flags,
-    on_attach = on_attach,
-}
+vim.lsp.enable('pyright')
+vim.lsp.enable('rust_analyzer')
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
