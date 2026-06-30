@@ -11,7 +11,6 @@
   "nginx.vim": { "branch": "master", "commit": "a5991f38135d0c6c259d0b9f5e629ba33b891b9e" },
   "nvim-cmp": { "branch": "main", "commit": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca" },
   "nvim-lspconfig": { "branch": "master", "commit": "3371bf298c1f56efc26771ee961f461176958fb5" },
-  "nvim-treesitter": { "branch": "master", "commit": "cf12346a3414fa1b06af75c79faebe7f76df080a" },
   "tokyonight.nvim": { "branch": "main", "commit": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6" },
   "vim-lastplace": { "branch": "master", "commit": "e58cb0df716d3c88605ae49db5c4741db8b48aa9" },
   "vim-nftables": { "branch": "master", "commit": "26f8a506c6f3e41f1e4a8d6aa94c9a79a666bbff" },

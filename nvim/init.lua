@@ -47,7 +47,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
-    'nvim-treesitter/nvim-treesitter',
     { 'folke/tokyonight.nvim', lazy = false, priority = 1000 },
     'farmergreg/vim-lastplace',
     'nmac427/guess-indent.nvim',
@@ -98,13 +97,6 @@ require('gitsigns').setup()
 -- GuessIndent
 -- https://github.com/NMAC427/guess-indent.nvim
 require('guess-indent').setup()
-
--- Treesitter
--- https://github.com/nvim-treesitter/nvim-treesitter
-require('nvim-treesitter.configs').setup {
-    sync_install = false,
-    auto_install = true,
-}
 
 -- nvim-cmp
 -- https://github.com/hrsh7th/nvim-cmp
