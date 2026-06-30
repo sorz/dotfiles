@@ -27,6 +27,12 @@ shopt -s checkwinsize
 shopt -s autocd
 shopt -s globstar
 
+# local bin
+BIN_DIRS=".local .cargo .yarn go"
+for dir in $BIN_DIRS; do
+    [[ -d "$HOME/$dir/bin" ]] && export PATH="$HOME/$dir/bin:$PATH"
+done
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias dotenv='. env/bin/activate'
@@ -146,12 +152,6 @@ if [[ -d ~/.dotfiles/bash/generated ]]; then
         source $file
     done
 fi
-
-# local bin
-BIN_DIRS=".local .cargo .yarn go"
-for dir in $BIN_DIRS; do
-    [[ -d "$HOME/$dir/bin" ]] && export PATH="$HOME/$dir/bin:$PATH"
-done
 
 # Android
 [[ -d /opt/android ]] && export ANDROID_HOME="/opt/android"
